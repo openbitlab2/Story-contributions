@@ -3,10 +3,9 @@ sudo apt update
 sudo apt-get update
 sudo apt install curl git make jq build-essential gcc unzip wget lz4 aria2 -y
 
-wget https://story-geth-binaries.s3.us-west-1.amazonaws.com/geth-public/geth-linux-amd64-0.9.2-ea9f0d2.tar.gz
-tar -xzf geth-linux-amd64-0.9.2-ea9f0d2.tar.gz
-mv geth-linux-amd64-0.9.2-ea9f0d2/geth /usr/local/bin/geth
-rm -rf geth-linux-amd64*
+wget https://github.com/piplabs/story-geth/releases/download/v0.9.4/geth-linux-amd64
+chmod +x geth-linux-amd64
+mv geth-linux-amd64 /usr/local/bin/geth
 wget https://story-geth-binaries.s3.us-west-1.amazonaws.com/story-public/story-linux-amd64-0.11.0-aac4bfe.tar.gz
 tar -xzf story-linux-amd64-0.11.0-aac4bfe.tar.gz
 mv story-linux-amd64-0.11.0-aac4bfe/story /usr/local/bin/story
